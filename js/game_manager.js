@@ -4,7 +4,7 @@ function GameManager(size, InputManager, Actuator, ScoreManager) {
   this.scoreManager = new ScoreManager;
   this.actuator     = new Actuator;
   this.rotated      = false;
-  this.startTiles   = 2;
+  this.startTiles   = 27;
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("rotate", this.rotate.bind(this));
@@ -74,7 +74,7 @@ GameManager.prototype.addStartTiles = function () {
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable()) {
-    var value = Math.random() < 0.9 ? 2 : 4;
+    var value = Math.random() < 0.9 ? 1 : 2;
     var tile = new Tile(this.grid.randomAvailableCell(), value);
 
     this.grid.insertTile(tile);
@@ -86,13 +86,13 @@ GameManager.prototype.addBonus = function () {
   if (Math.random() > 0.2 * this.grid.availableCells().length / Math.pow(this.size, 3)) {
     return;
   }
-  var maxBonus = 15;
-  var values = [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096];
+  var maxBonus = 0;
+  var values = [89];
   var value = values[Math.floor(Math.random() * values.length)];
   if (this.bonus[value] === undefined) {
     this.bonus[value] = 0;
   }
-  if (this.bonus[value] == 2) {
+  if (this.bonus[value] == 21) {
     return;
   }
   for (var num in this.bonus) {
@@ -181,7 +181,7 @@ GameManager.prototype.move = function (direction) {
           // Only one merger per row traversal?
           if (next && next.value === tile.value && next.type === tile.type && !next.mergedFrom) {
             var type = next.type === 'number' ? 'number' : 'bonused';
-            var merged = new Tile(positions.next, tile.value * 2, type);
+            var merged = new Tile(positions.next, tile.value + 1, type);
             merged.mergedFrom = [tile, next];
             tile.merged = next.merged = true;
 
@@ -199,8 +199,8 @@ GameManager.prototype.move = function (direction) {
             if (merged.value > self.max) {
               self.max = merged.value;
             }
-            // The mighty 2048 tile
-            if (merged.value === 256 && merged.type === 'number') self.won = true;
+            // The mighty 23 tile
+            if (merged.value === 23 && merged.type === 'number') self.won = true;
           } else {
             self.moveTile(tile, positions.farthest);
           }
