@@ -575,51 +575,97 @@ hr {
   background: #776e65;
   color: #eee4da;
 }
-.tile.tile-2 .cube-face {
+.tile.tile-1 .cube-face {
   background: #eee4da;
 }
-.tile.tile-bonus.tile-2 .cube-face {
-  background: #776e65;
-  color: #eee4da;
+.tile.tile-2 .cube-face {
+  background: #dededf;
+}
+.tile.tile-3 .cube-face {
+  background: #d7d8ef;
 }
 .tile.tile-4 .cube-face {
-  background: #ede0c8;
+  background: #dbefd7;
 }
-.tile.tile-bonus.tile-4 .cube-face {
-  background: #776e65;
-  color: #ede0c8;
+.tile.tile-5 .cube-face {
+  color: #f9f6f2;
+  background: #cf2a2a;
+}
+.tile.tile-6 .cube-face {
+  background: #cf2a4f;
+  color: #f9f6f2;
+}
+.tile.tile-7 .cube-face {
+  color: #f9f6f2;
+  background: #cf2a73;
 }
 .tile.tile-8 .cube-face {
+  background: #cf2a96;
   color: #f9f6f2;
-  background: #f2b179;
 }
-.tile.tile-bonus.tile-8 .cube-face {
-  background: #f9f6f2;
-  color: #f2b179;
+.tile.tile-9 .cube-face {
+  color: #f9f6f2;
+  background: #cf2ac1;
+}
+.tile.tile-10 .cube-face {
+  background: #cf2ae3;
+  color: #f9f6f2;
+}
+.tile.tile-11 .cube-face {
+  color: #f9f6f2;
+  background: #ad2ae2;
+}
+.tile.tile-12 .cube-face {
+  background: #8c2ae2;
+  color: #f9f6f2;
+}
+.tile.tile-13 .cube-face {
+  color: #f9f6f2;
+  background: #592ae2;
+}
+.tile.tile-14 .cube-face {
+  background: #2a2ae2;
+  color: #f9f6f2;
+}
+.tile.tile-15 .cube-face {
+  color: #f9f6f2;
+  background: #0e0e73;
 }
 .tile.tile-16 .cube-face {
+  background: #0e4b73;
   color: #f9f6f2;
-  background: #f59563;
 }
-.tile.tile-bonus.tile-16 .cube-face {
-  background: #f9f6f2;
-  color: #f59563;
-}
-.tile.tile-32 .cube-face {
+.tile.tile-17 .cube-face {
   color: #f9f6f2;
-  background: #f67c5f;
+  background: #0e6b73;
 }
-.tile.tile-bonus.tile-32 .cube-face {
-  background: #f9f6f2;
-  color: #f67c5f;
-}
-.tile.tile-64 .cube-face {
+.tile.tile-18 .cube-face {
+  background: #0e7356;
   color: #f9f6f2;
-  background: #f65e3b;
 }
-.tile.tile-bonus.tile-64 .cube-face {
-  background: #f9f6f2;
-  color: #f65e3b;
+.tile.tile-19 .cube-face {
+  color: #f9f6f2;
+  background: #0e7336;
+}
+.tile.tile-20 .cube-face {
+  background: #11730e;
+  color: #f9f6f2;
+}
+.tile.tile-21 .cube-face {
+  color: #f9f6f2;
+  background: #42730e;
+}
+.tile.tile-22 .cube-face {
+  background: #62730e;
+  color: #f9f6f2;
+}
+.tile.tile-23 .cube-face {
+  color: #f9f6f2;
+  background: #73680e;
+}
+.tile.tile-24 .cube-face {
+  background: #73470e;
+  color: #f9f6f2;
 }
 .tile.tile-128 .cube-face {
   color: #f9f6f2;
@@ -698,8 +744,8 @@ hr {
 }
 .tile.tile-super .cube-face {
   color: #f9f6f2;
-  background: #3c3a32;
-  font-size: 20px;
+  background: #000000;
+  font-size: 30px;
 }
 .tile.tile-bonus.tile-super .cube-face {
   background: #f9f6f2;
